@@ -38,3 +38,57 @@ mensaje2 = " "
 print(mensaje2*5+"codigo")
 mensaje3 = " "+"-"+"codigo morse"
 print(mensaje3*5)
+print()
+
+#Buscar subcadenas en Python. find()
+cadena = "Hola mundo"
+posicion = cadena.find("mundo")
+print(posicion)
+# Nos dice en que índice está el primer caracter del nombre buscado.
+
+cadena = "Mi carro me lo robaron"
+posicion = cadena.find("lo")
+print(posicion)
+# O bien para más completo podemos hacer:
+print(f"El indice de la subcadena lo: {posicion}")
+# Va a darte el índice de la primera ocurrencia.
+
+texto = "Iba por el monte, lo vi, me vio, me lo robaron, mi carro me lo robaron"
+primera = texto.find("lo")
+
+segunda = texto.find("lo", primera + 1)
+print(f"primera aparición: {primera}")
+print(f"segunda aparición: {segunda}")
+print()
+
+# Generador de Email
+print("***Generador de Email***")
+nombre_normalizado = " Nikita Chervonnyy "
+print(f"Nombre usuario: {nombre_normalizado}")
+# Normalizar nombre usuario, limpiar espacios en blanco
+nombre_normalizado = nombre_normalizado.strip()
+# Vamos a reemplazar espacios en blanco por .
+nombre_normalizado = nombre_normalizado.replace(" ", ".")
+print(f"Nombre usuario: {nombre_normalizado}")
+# Convertirmos todo a minisculas
+nombre_normalizado = nombre_normalizado.lower()
+# control+r para cambiar todos los nombres de un tipo por otro diferente a la vez
+print(f"Nombre usuario normalizado: {nombre_normalizado}")
+
+nombre_empresa = " Caiman Minimarket "
+print(f"\nNombre empresa: {nombre_empresa}")
+extension_dominio = ".com.es"
+print(f"Extension dominio: {extension_dominio}")
+
+# Quitamos espacios en blanco y convertimos a mayus
+
+nombre_empresa_normalizado = nombre_empresa.replace(" ","").lower()#podemos poner el .lower() después pues es una función así no hay que estar haciendo nuevamente el proceso.
+#Este es otro método para quitar los espacios en blanco, replazando el " " por ""
+print(f"Nombre empresa normalizado: {nombre_empresa_normalizado}")
+dominio_email = f"{nombre_empresa_normalizado}{extension_dominio}"
+print(F"Dominio del email normalizado: {dominio_email}")
+email = f"{nombre_empresa_normalizado}{extension_dominio}"
+print(f"\nEmail final generado: {email}")
+
+
+
